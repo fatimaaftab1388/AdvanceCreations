@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "Advance Creations - Premium Medical Equipments at Affordable Prices",
   description:
     "Advance Creations: Professional medical equipment supplier offering high-quality medical equipments.",
+  icons: {
+    icon: '/logo_latest.png',
+    apple: '/logo_latest.png',
+  }
 
 }
 
