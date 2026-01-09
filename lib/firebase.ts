@@ -14,10 +14,21 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase (only once)
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+let app;
+let db;
+let auth;
 
-// Initialize Firestore & Auth
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+if (firebaseConfig.apiKey) {
+    try {
+        app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+        db = getFirestore(app);
+        auth = getAuth(app);
+    } catch (error) {
+        console.error("Firebase initialization failed:", error);
+    }
+} else {
+    console.warn("Firebase configuration missing (likely during build). Skipping initialization.");
+}
 
+export { db, auth };
 export default app;
