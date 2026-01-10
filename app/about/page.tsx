@@ -1,6 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Shield, Award, Activity, Heart, Globe, Users } from "lucide-react"
+import { Shield, Award, Activity, Heart, Globe, Users, Tag } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -33,7 +33,7 @@ export default function About() {
                   Specialized Medical Equipment <span className="text-primary italic">Trading Experts</span>
                 </h2>
                 <p className="text-sm md:text-base text-gray-400 leading-relaxed font-medium italic">
-                  "We are a specialized medical equipment trading company, committed to providing reliable and high-quality healthcare solutions. Our focus is on delivering precise, trusted, and modern medical equipment that meets professional healthcare standards. We aim to support healthcare providers with dependable products and efficient service."
+                  "We are a specialized medical equipment trading company dedicated to delivering reliable, high-quality healthcare solutions. Our focus is on providing precise, trusted, and modern medical equipment that meets international healthcare standards. Through dependable products, competitive pricing, and efficient service, we support healthcare providers in delivering better patient care."
                 </p>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function About() {
                 <div className="absolute -inset-3 bg-primary/20 rounded-[32px] blur-xl group-hover:bg-primary/30 transition-all duration-700"></div>
                 <div className="relative aspect-[4/5] rounded-[24px] overflow-hidden border-2 border-white shadow-xl bg-black">
                   <Image
-                    src="/ceo.png"
+                    src="/ceo_new.jpg"
                     alt="CEO Abdur Rehman Abbasi"
                     fill
                     className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
@@ -72,13 +72,13 @@ export default function About() {
                 </h3>
                 <div className="space-y-3.5 text-gray-600 font-medium leading-relaxed italic text-[13px] md:text-sm">
                   <p>
-                    "I have over six years of hands-on experience in the medical equipment industry. I grew up and worked in Japan, where I was directly involved in installing, assembling, and maintaining medical machines. This experience taught me the true value of precision, quality, and reliability in healthcare."
+                    "I have over six years of hands-on experience in the medical equipment industry. I grew up and worked in Japan, where I was directly involved in installing, assembling, and maintaining advanced medical machines. This journey taught me the true value of precision, quality, and reliability—standards that are essential in healthcare and that I continue to uphold today."
                   </p>
                   <p>
-                    "After returning to Pakistan, I founded this company with a clear purpose—not only to deliver trusted, high-quality medical equipment, but also to contribute positively to Pakistan’s healthcare system and economy. My goal is to support local healthcare providers, create sustainable business opportunities, and help strengthen the medical sector through reliable and modern solutions."
+                    "After returning to Pakistan, I founded this company with a clear purpose: not only to deliver trusted, high-quality medical equipment, but also to make advanced healthcare solutions more accessible. By offering reliable equipment at fair and competitive prices, we aim to support hospitals and clinics without compromising on international quality standards."
                   </p>
                   <p>
-                    "I strongly believe that by maintaining international standards and ethical practices, we can play our part in improving healthcare services while adding value to the country’s economic growth."
+                    "I strongly believe that by maintaining ethical practices, global standards, and cost-effective solutions, we can contribute meaningfully to Pakistan’s healthcare system. Our goal is to support local healthcare providers, create sustainable business opportunities, and strengthen the medical sector while adding real value to the country’s economic growth."
                   </p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function About() {
               <h4 className="text-2xl font-black uppercase tracking-tight italic">Why Professionals Choose <span className="text-primary italic">Advance Creations</span></h4>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   icon: Award,
@@ -110,6 +110,11 @@ export default function About() {
                   icon: Users,
                   title: "Provider Support",
                   desc: "Our mission is to empower healthcare providers with efficient service and dependable equipment."
+                },
+                {
+                  icon: Tag,
+                  title: "Competitive Pricing",
+                  desc: "Providing the best market rates for premium medical equipment, ensuring maximum value for your investment."
                 }
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[32px] hover:bg-white/10 transition-all duration-500 group">

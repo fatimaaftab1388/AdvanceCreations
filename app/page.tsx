@@ -27,11 +27,11 @@ export default function Home() {
               />
 
               {/* Overlay with Buttons (Positioned at bottom, below all text) */}
-              <div className="absolute inset-0 flex flex-col justify-end items-start px-8 md:px-20 pb-16 md:pb-24 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+              <div className="absolute inset-0 flex flex-col justify-end items-start px-6 md:px-20 pb-8 md:pb-24 bg-gradient-to-t from-black/80 via-transparent to-transparent">
                 <div className="flex flex-col sm:flex-row justify-start gap-4 md:gap-6 animate-in slide-in-from-bottom duration-1000 delay-500">
                   <Link
                     href="/products"
-                    className="bg-primary text-black px-6 md:px-8 py-2 md:py-2.5 rounded-full font-black uppercase text-[10px] md:text-xs tracking-widest hover:bg-white transition-all shadow-[0_10px_30px_rgba(197,160,89,0.4)] active:scale-95 flex items-center justify-center gap-2 sm:ml-32 lg:ml-40.5"
+                    className="bg-primary text-black px-6 md:px-8 py-2 md:py-2.5 rounded-full font-black uppercase text-[10px] md:text-xs tracking-widest hover:bg-white transition-all shadow-[0_10px_30px_rgba(197,160,89,0.4)] active:scale-95 hidden md:flex items-center justify-center gap-2 sm:ml-32 lg:ml-40.5"
                   >
                     View Our Products <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
                   </Link>

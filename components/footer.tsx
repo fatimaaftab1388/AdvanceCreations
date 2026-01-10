@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Send } from "lucide-react"
+import { FooterContactForm } from "./footer-contact-form"
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
           {/* Column 1: Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center p-1.5 border border-primary/20 group overflow-hidden">
+              {/* <div className="relative w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center p-1.5 border border-primary/20 group overflow-hidden">
                 <Image
                   src="/logo_v3.png"
                   alt="Advance Creations Logo"
@@ -19,7 +20,7 @@ export function Footer() {
                   height={48}
                   className="object-contain mix-blend-screen group-hover:scale-110 transition-transform duration-500"
                 />
-              </div>
+              </div> */}
               <h3 className="text-xl font-black text-white leading-none tracking-tight uppercase">
                 Advance <span className="text-primary">Creations</span>
               </h3>
@@ -85,16 +86,16 @@ export function Footer() {
                 </div>
                 <div className="text-sm text-gray-400 group-hover:text-white transition-colors">
                   <span className="block font-bold text-white mb-0.5">Phone</span>
-                  +92 337 80 64 727
+                  +92 337 8064 727
                 </div>
               </a>
-              <a href="mailto:info@advancecreations.com" className="flex items-start gap-4 group">
+              <a href="mailto:advanceincpvtltd@gmail.com" className="flex items-start gap-4 group">
                 <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-black transition-all">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="text-sm text-gray-400 group-hover:text-white transition-colors">
                   <span className="block font-bold text-white mb-0.5">Email</span>
-                  info@advancecreations.com
+                  advanceincpvtltd@gmail.com
                 </div>
               </a>
               <div className="flex items-start gap-4 group">
@@ -103,15 +104,15 @@ export function Footer() {
                 </div>
                 <div className="text-sm text-gray-400">
                   <span className="block font-bold text-white mb-0.5">Address</span>
-                  Professional Medical Equipment Solutions
+                  33,34 Civic Center Block F, Kohistan Enclave, Wah Cantt, Pakistan
                 </div>
               </div>
             </div>
 
-            <Link href="/inquiry" className="flex items-center justify-center gap-2 w-full bg-primary text-black py-3 rounded-lg text-sm font-bold hover:bg-white transition-all shadow-lg active:scale-95">
-              <Send className="w-4 h-4" />
-              Inquiry Form
-            </Link>
+            {/* <div className="pt-4">
+              <h5 className="text-white font-bold mb-4 text-xs uppercase tracking-widest">Quick Inquiry</h5>
+              {/* <FooterContactForm /> */}
+            {/* </div> */}
           </div>
         </div>
 
@@ -121,16 +122,16 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
           <p>&copy; 2026 Advance Creations. All rights reserved.</p>
-          <div className="flex gap-6">
+          {/* <div className="flex gap-6">
             <Link href="#" className="hover:text-primary transition-colors">
               Privacy Policy
             </Link>
             <Link href="#" className="hover:text-primary transition-colors">
               Terms of Service
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
-    </footer>
+    </footer >
   )
 }

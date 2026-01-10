@@ -1,18 +1,25 @@
 import Link from "next/link"
 import Image from "next/image"
 import { SearchBar } from "./search-bar"
-import { Phone, Users, LogIn, Facebook, Instagram, Youtube, Mail, ChevronDown } from "lucide-react"
+import { Phone, Users, LogIn, Facebook, Instagram, Youtube, Mail, ChevronDown, Menu, ShieldCheck } from "lucide-react"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 export function Header() {
   return (
     <>
       <header className="bg-black text-white border-b border-gray-900 sticky top-0 z-[60] shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="flex items-center justify-between gap-6 w-full">
 
             {/* Left: Logo & Brand */}
             <Link href="/" className="flex items-center gap-3 group shrink-0">
-              <div className="relative w-14 h-14 md:w-16 md:h-16">
+              <div className="relative w-10 h-10 md:w-16 md:h-16">
                 <Image
                   src="/logo_v3.png"
                   alt="Advance Creations Logo"
@@ -22,15 +29,15 @@ export function Header() {
                 />
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-lg md:text-xl font-black text-white leading-none tracking-tight uppercase">
+                <h1 className="text-lg md:text-xl font-black text-white leading-none tracking-tight uppercase italic">
                   Advance <span className="text-primary">Creations</span>
                 </h1>
                 <p className="text-[10px] text-gray-500 font-bold tracking-widest uppercase"></p>
               </div>
             </Link>
 
-            {/* Center: Merged Navigation (Restored Two-Level Design) */}
-            <nav className="flex flex-wrap items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-12 gap-y-4">
+            {/* Center: Merged Navigation (Desktop) */}
+            <nav className="hidden lg:flex flex-wrap items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-12 gap-y-4">
               {[
                 { name: "Home", href: "/" },
                 // { name: "Assessment", href: "/assessment" },
@@ -84,15 +91,11 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Right: Utility Links (Log in, Membership, Socials) */}
-            <div className="flex items-center gap-4 text-gray-400 font-medium text-xs md:text-sm shrink-0">
+            {/* Right: Utility Links (Desktop) */}
+            <div className="hidden lg:flex items-center gap-4 text-gray-400 font-medium text-xs md:text-sm shrink-0">
               <Link href="/login" className="flex items-center gap-1 hover:text-primary transition-colors">
-                <LogIn className="w-4 h-4" />
-                <span className="hidden sm:inline">Log in</span>
-              </Link>
-              <Link href="/membership" className="flex items-center gap-1 hover:text-primary transition-colors">
-                <Users className="w-4 h-4" />
-                <span className="hidden sm:inline">Membership</span>
+                <ShieldCheck className="w-4 h-4" />
+                <span className="hidden sm:inline">Admin</span>
               </Link>
               <div className="h-4 w-px bg-gray-800 mx-1"></div>
               <div className="flex gap-2">
@@ -100,6 +103,56 @@ export function Header() {
                 <Link href="#" className="hover:text-primary transition-colors"><Facebook className="w-4 h-4 md:w-5 md:h-5" /></Link>
                 <Link href="#" className="hover:text-primary transition-colors"><Youtube className="w-4 h-4 md:w-5 md:h-5" /></Link>
               </div>
+            </div>
+
+            {/* Mobile Menu (Hamburger) */}
+            <div className="lg:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <button className="text-white hover:text-primary p-2">
+                    <Menu className="w-6 h-6" />
+                  </button>
+                </SheetTrigger>
+                <SheetContent side="right" className="bg-black border-l border-gray-800 text-white w-[300px]">
+                  <SheetHeader>
+                    <SheetTitle className="text-center text-white italic font-black uppercase text-xl mt-6">
+                      Advance <span className="text-primary">Creations</span>
+                    </SheetTitle>
+                  </SheetHeader>
+                  <div className="mt-12 flex flex-col gap-8 px-6">
+                    <div className="flex flex-col gap-6 items-center text-center">
+                      {[
+                        { name: "Home", href: "/" },
+                        { name: "Products", href: "/products" },
+                        { name: "About Us", href: "/about" },
+                        { name: "Contact Us", href: "/inquiry" },
+                      ].map((item, index) => (
+                        <Link
+                          key={index}
+                          href={item.href}
+                          className="text-base font-bold text-gray-400 hover:text-primary transition-colors uppercase tracking-widest py-1"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+
+                    <div className="h-px bg-gray-800 my-2"></div>
+
+                    <div className="flex flex-col gap-5 text-sm text-gray-500 items-center">
+                      <Link href="/login" className="flex items-center gap-2 hover:text-primary transition-colors font-medium">
+                        <ShieldCheck className="w-4 h-4" /> Admin
+                      </Link>
+                    </div>
+
+                    <div className="mt-auto flex gap-4 text-gray-400 justify-start pt-8">
+                      <Link href="#" className="hover:text-primary"><Instagram className="w-5 h-5" /></Link>
+                      <Link href="#" className="hover:text-primary"><Facebook className="w-5 h-5" /></Link>
+                      <Link href="#" className="hover:text-primary"><Youtube className="w-5 h-5" /></Link>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>

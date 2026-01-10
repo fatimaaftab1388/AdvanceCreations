@@ -65,7 +65,7 @@ export default function InquiryPage() {
                                         </td>
                                         <td className="px-6 py-5">
                                             <a href="mailto:advanceincpvtltd@gmail.com" className="inline-flex items-center gap-2 text-black font-black uppercase text-[9px] tracking-widest hover:text-primary transition-colors group/link">
-                                                Send Email
+                                                advanceincpvtltd@gmail.com
                                                 <div className="w-4 h-[2px] bg-primary group-hover:w-8 transition-all duration-300"></div>
                                             </a>
                                         </td>
