@@ -29,13 +29,13 @@ export function Footer() {
               Supporting Healthcare Providers with Reliable & Cost-Effective Medical Equipment Worldwide.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-black hover:border-primary transition-all duration-300">
+              <a href="https://www.facebook.com/share/14WVDFprtxZ/?mibextid=wwXIfr" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-black hover:border-primary transition-all duration-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-black hover:border-primary transition-all duration-300">
+              <a href="https://www.instagram.com/advance_creations_pvt_ltd?igsh=ZWI4dXo1ZXlwYmR4&utm_source=qr" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-black hover:border-primary transition-all duration-300">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-black hover:border-primary transition-all duration-300">
+              <a href="https://www.linkedin.com/in/advance-creations-54b5b53a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-black hover:border-primary transition-all duration-300">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>

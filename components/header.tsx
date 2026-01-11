@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { SearchBar } from "./search-bar"
-import { Phone, Users, LogIn, Facebook, Instagram, Youtube, Mail, ChevronDown, Menu, ShieldCheck } from "lucide-react"
+import { Phone, Users, LogIn, Facebook, Instagram, Youtube, Mail, ChevronDown, Menu, ShieldCheck, Linkedin } from "lucide-react"
 import {
   Sheet,
   SheetContent,
@@ -99,9 +99,10 @@ export function Header() {
               </Link>
               <div className="h-4 w-px bg-gray-800 mx-1"></div>
               <div className="flex gap-2">
-                <Link href="#" className="hover:text-primary transition-colors"><Instagram className="w-4 h-4 md:w-5 md:h-5" /></Link>
-                <Link href="#" className="hover:text-primary transition-colors"><Facebook className="w-4 h-4 md:w-5 md:h-5" /></Link>
-                <Link href="#" className="hover:text-primary transition-colors"><Youtube className="w-4 h-4 md:w-5 md:h-5" /></Link>
+                <Link href="https://www.instagram.com/advance_creations_pvt_ltd?igsh=ZWI4dXo1ZXlwYmR4&utm_source=qr" className="hover:text-primary transition-colors"><Instagram className="w-4 h-4 md:w-5 md:h-5" /></Link>
+                <Link href="https://www.facebook.com/share/14WVDFprtxZ/?mibextid=wwXIfr" className="hover:text-primary transition-colors"><Facebook className="w-4 h-4 md:w-5 md:h-5" /></Link>
+                <Link href="https://www.linkedin.com/in/advance-creations-54b5b53a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="hover:text-primary transition-colors"><Linkedin className="w-4 h-4 md:w-5 md:h-5" /></Link>
+
               </div>
             </div>
 
@@ -146,8 +147,9 @@ export function Header() {
                     </div>
 
                     <div className="mt-auto flex gap-4 text-gray-400 justify-start pt-8">
-                      <Link href="#" className="hover:text-primary"><Instagram className="w-5 h-5" /></Link>
-                      <Link href="#" className="hover:text-primary"><Facebook className="w-5 h-5" /></Link>
+                      <Link href="https://www.instagram.com/advance_creations_pvt_ltd?igsh=ZWI4dXo1ZXlwYmR4&utm_source=qr" className="hover:text-primary"><Instagram className="w-5 h-5" /></Link>
+                      <Link href="https://www.facebook.com/share/14WVDFprtxZ/?mibextid=wwXIfr" className="hover:text-primary"><Facebook className="w-5 h-5" /></Link>
+                      <Link href="https://www.linkedin.com/in/advance-creations-54b5b53a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="hover:text-primary"><Linkedin className="w-5 h-5" /></Link>
                       <Link href="#" className="hover:text-primary"><Youtube className="w-5 h-5" /></Link>
                     </div>
                   </div>
