@@ -37,7 +37,7 @@ export function Header() {
             </Link>
 
             {/* Center: Merged Navigation (Desktop) */}
-            <nav className="hidden lg:flex flex-wrap items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-12 gap-y-4">
+            <nav className="hidden xl:flex flex-wrap items-center justify-center gap-x-6 md:gap-x-8 lg:gap-x-12 gap-y-4">
               {[
                 { name: "Home", href: "/" },
                 // { name: "Assessment", href: "/assessment" },
@@ -92,7 +92,7 @@ export function Header() {
             </nav>
 
             {/* Right: Utility Links (Desktop) */}
-            <div className="hidden lg:flex items-center gap-4 text-gray-400 font-medium text-xs md:text-sm shrink-0">
+            <div className="hidden xl:flex items-center gap-4 text-gray-400 font-medium text-xs md:text-sm shrink-0">
               <Link href="/login" className="flex items-center gap-1 hover:text-primary transition-colors">
                 <ShieldCheck className="w-4 h-4" />
                 <span className="hidden sm:inline">Admin</span>
@@ -107,7 +107,7 @@ export function Header() {
             </div>
 
             {/* Mobile Menu (Hamburger) */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <Sheet>
                 <SheetTrigger asChild>
                   <button className="text-white hover:text-primary p-2">
