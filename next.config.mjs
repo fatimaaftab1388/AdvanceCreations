@@ -3,15 +3,27 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
   images: {
     unoptimized: true,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-      }
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
     ],
   },
-}
 
-export default nextConfig
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "advancecreationspvtltd.com" }],
+        destination: "https://www.advancecreationspvtltd.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
+};
+
+export default nextConfig;
